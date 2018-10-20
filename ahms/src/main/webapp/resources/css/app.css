@@ -1,0 +1,87 @@
+/*bootstrap*/
+.modal-backdrop {
+	z-index: -1;
+}
+
+/*Test*/
+table {
+	width: 100%;
+}
+
+body {
+	color: black;
+}
+
+body {
+	font-size: 14px;
+}
+
+#view-port {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#header {
+	flex-basis: 50px;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+#site-content {
+	flex: 1 1 auto;
+	display: flex;
+	min-height: 0;
+}
+
+#footer {
+	flex-basis: 20px;
+	color: white;
+}
+
+a {
+	color: inherit;
+}
+
+/*Custom Classes*/
+.cus-inline-block {
+	display: inline-block !important;
+}
+
+.cus-table-borderless th, .cus-table-borderless td {
+	border: none;
+}
+
+.display th, .display tfoot th {
+	font-size: 12px;
+}
+
+.cus-note-td {
+	max-width: 40px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@media print {
+	@page {
+		margin: 0;
+	}
+	body * {
+		visibility: hidden;
+	}
+	#section-to-print, #section-to-print * {
+		visibility: visible;
+	}
+	#section-to-print {
+		position: absolute;
+		left: 1cm;
+		top: 1cm;
+		bottom: 1cm;
+		right: 1cm;
+	}
+}
